@@ -1,13 +1,5 @@
 const leapYears = function(year) {
-  if (year % 4 == 0) {
-    if (year % 400 == 0) { // Find the right condition
-      return true
-   } else {
-      return false
-   }
-   return true
-  }
-  return false
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 };
 
 leapYears(2000)
